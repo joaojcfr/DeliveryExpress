@@ -20,7 +20,7 @@ import styles from './Register.module.css'
 const Register = () => {
   // password visibility
   const [passwordVisible, setPasswordVisible] = useState(false)
-  const [error, setError] = useState(''); 
+  const [error, setError] = useState('');
 
   const handleTogglePassword = () => {
     setPasswordVisible(!passwordVisible)
@@ -63,7 +63,7 @@ const Register = () => {
     <div
       className={styles.main_frame}
       id={styles.signup}
-      // className="mx-auto w-full max-w-3xl px-5 py-16 md:px-10 md:py-20"
+    // className="mx-auto w-full max-w-3xl px-5 py-16 md:px-10 md:py-20"
     >
       <div className="relative mx-auto max-w-xl rounded text-center">
         {/* Signup Header */}
@@ -82,6 +82,8 @@ const Register = () => {
                 className={`form-label text-dark mb-1 text-left font-bold`}
               ></label>
 
+
+
               {/* username */}
               <input
                 autoComplete="on"
@@ -90,13 +92,16 @@ const Register = () => {
                 }
                 type="text"
                 id="username"
-                className={`username form-control username  m-auto block h-9 w-full rounded-5 bg-light  px-4 py-6 text-sm ${styles.username}`}
+                className={`username form-control username text-light m-auto block h-9 w-full rounded-5  px-4 py-6 text-sm ${styles.username}`}
                 placeholder="Username"
                 required
               />
 
               <i className={`fa-solid fa-user ms-2 ${styles.uil1}`}></i>
             </div>
+
+
+
 
             {/* inputbox1  */}
             <div
@@ -115,13 +120,16 @@ const Register = () => {
                 }
                 type="text"
                 id="firstname"
-                className={`firstname form-control firstname m-auto block h-9 w-full rounded-5 bg-light  px-4 py-6 text-sm ${styles.firstname}`}
+                className={`firstname form-control text-light  firstname m-auto block h-9 w-full rounded-5 px-4 py-6 text-sm ${styles.firstname}`}
                 placeholder="First Name"
                 required
               />
 
               <i className={`fa-regular fa-user ms-2 ${styles.uil1}`}></i>
             </div>
+
+
+
 
             {/* inputbox2  */}
             <div
@@ -140,13 +148,16 @@ const Register = () => {
                 }
                 type="text"
                 id="lastname"
-                className={`input4 form-control  m-auto block h-9 w-full rounded-5 bg-light  px-4 py-6 text-sm ${styles.lastname}`}
+                className={`input4 form-control  m-auto block h-9 w-full text-light rounded-5 px-4 py-6 text-sm ${styles.lastname}`}
                 placeholder="Last Name"
                 required
               />
 
               <i className={`fa-regular fa-user ms-2 ${styles.uil1}`}></i>
             </div>
+
+
+
 
             {/* phoneBox */}
             <div
@@ -165,13 +176,17 @@ const Register = () => {
                 }
                 type="number"
                 id="phone"
-                className={`input4 form-control  m-auto block h-9 w-full rounded-5 bg-light  px-4 py-6 text-sm ${styles.phone}`}
+                className={`input4 form-control m-auto text-light  block h-9 w-full rounded-5 px-4 py-6 text-sm ${styles.phone}`}
                 placeholder="Phone"
                 required
               />
 
               <i className={`fa-solid fa-phone ${styles.phonelogo}`}></i>
             </div>
+
+
+
+
 
             {/* inputbox3 */}
             <div
@@ -190,10 +205,13 @@ const Register = () => {
                 }
                 type="email"
                 id="email"
-                className={`email form-control m-auto block h-9 w-full rounded-5 bg-light px-4 py-6 text-sm ${styles.email}`}
+                className={`email form-control text-light m-auto block h-9 w-full rounded-5 px-4 py-6 text-sm ${styles.email}`}
                 placeholder="Email Address"
                 required
               />
+
+
+
 
               <i
                 className={`fa-solid email fa-envelope ms-2 ${styles.emaillogo}`}
@@ -209,6 +227,8 @@ const Register = () => {
                 className="form-label text-dark mb-1 text-left font-bold"
               ></label>
 
+
+
               {/*password */}
               <input
                 autoComplete="on"
@@ -216,7 +236,7 @@ const Register = () => {
                   setValues({ ...values, password: e.target.value })
                 }
                 type={passwordVisible ? 'text' : 'password'} // This toggles the type between 'text' and 'password'
-                className={`password form-control m-auto block h-9 w-full rounded-5 bg-light px-4 ${styles.password}`}
+                className={`password form-control text-light  m-auto block h-9 w-full rounded-5 px-4 ${styles.password}`}
                 placeholder="Password "
                 required
                 id="password"
@@ -238,17 +258,17 @@ const Register = () => {
             </div>
 
             {/* Checkbox */}
-            <label className="mb-6 flex items-center justify-center">
-              {/* <input
+            <label className="mb-6 flex ps-2 items-center justify-center">
+              <input
                 type="checkbox"
                 name="checkbox"
-                className="float-left mr-1"
-              /> */}
+                className="float-left mr-2"
+              />
 
               {/* i agree */}
-              {/* <span className="text-light inline-block cursor-pointer text-sm">
+              <span className="text-light inline-block cursor-pointer text-sm">
                 I agree to receive market updates from Delivery Express
-              </span> */}
+              </span>
             </label>
 
             {error && <div className={styles.error}>!!{error}</div>}
@@ -269,7 +289,7 @@ const Register = () => {
           </div>
 
           {/* google signup button*/}
-          {/* <button className={`relative mb-4 flex font-bold text-center w-full cursor-pointer items-center  px-6 py-3 ${styles.googlesignup}`}>
+          <button className={`relative mb-4 flex font-bold text-center w-full cursor-pointer items-center  px-6 py-3 ${styles.googlesignup}`}>
 
             <i className="fa-brands fa-google-plus-g text-danger"></i>
             <a
@@ -278,15 +298,15 @@ const Register = () => {
             >
               <span>Sign up with Google</span>
             </a>
-          </button> */}
+          </button>
 
           {/* facebook signup button */}
-          {/* <button className={`relative flex font-bold text-center w-full cursor-pointer items-center  px-6 py-3 ${styles.facebooksignup}`}>
+          <button className={`relative flex font-bold text-center w-full cursor-pointer items-center  px-6 py-3 ${styles.facebooksignup}`}>
             <i className="fa-brands fa-facebook text-primary"></i>
             <a href="https://facebook.com" className="mx-auto pl-5">
               <span>Sign up with Facebook</span>
             </a>
-          </button> */}
+          </button>
 
 
         </div>

@@ -22,10 +22,11 @@
     background: url(https://pics.craiyon.com/2023-10-30/1f7bbe4feae4429d9aa47c57e63f001b.webp) no-repeat;
     background-size: cover;
     backdrop-filter: blur(10px);
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     /* Adjust padding */
     transition: 0.2s ease-in-out;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-bottom: 10%;
 }
 
 
@@ -83,8 +84,11 @@
 .password,
 /* .input5, */
 .phone {
-    border: 3px solid;
-    background: rgba(255, 255, 255, 0.688);
+    /* border: 3px solid; */
+   /* background-color: transparent !important; */
+   background-color: #1c1c1c !important;
+   color: #fff;
+
 }
 
 
@@ -97,31 +101,31 @@
 
 
 .username::placeholder {
-    color: #000000;
+    color: #fff;
 }
 
 .firstname::placeholder {
-    color: #000000;
+    color: #fff;
 }
 
 .lastname::placeholder {
-    color: #000000;
+    color: #fff;
 }
 
 .email::placeholder {
-    color: #000000;
+    color: #fff;
 }
 
 .password::placeholder {
-    color: #000000;
+    color: #fff;
 }
 
 /* .input5::placeholder {
-    color: #000000;
+    color: #fff;
 } */
 
 .phone::placeholder {
-    color: #000000;
+    color: #fff;
 }
 
 
@@ -147,20 +151,20 @@
 .uil1 {
     position: absolute;
     top: 50%;
-    right: 70px;
+    right: 50px;
     transform: translateY(-50%);
     font-size: 1.8em;
-    color: black;
+    color: rgb(255, 255, 255);
 
 }
 
 .emaillogo {
     position: absolute;
     top: 50%;
-    right: 70px;
+    right: 50px;
     transform: translateY(-50%);
     font-size: 1.8em;
-    color: black;
+    color: rgb(255, 255, 255);
 
 }
 
@@ -169,10 +173,10 @@
 .phonelogo {
     position: absolute;
     top: 50%;
-    right: 70px;
+    right: 50px;
     transform: translateY(-50%);
     font-size: 1.8em;
-    color: black;
+    color: rgb(255, 255, 255);
 
 }
 
@@ -181,10 +185,10 @@
 .uil2{
     position: absolute;
     bottom: 50px;
-    right: 70px;
+    right: 50px;
     transform: translateY(115%);
     font-size: 1.8em;
-    color: black;
+    color: rgb(255, 255, 255);
 
 }
 
@@ -222,6 +226,8 @@
 .policy:hover {
     color: gold;
 }
+
+
 .error {
     color: red;
     font-size: 1em;

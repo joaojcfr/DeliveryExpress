@@ -16,7 +16,7 @@ const About = () => {
             <div className="mb-20 mt-20 flex items-center w-full">
               <div className="w-1/2 text-right pr-5 md:pr-12">
                 <h5 className="text-lg text-dark-subtle md:text-2xl font-semibold">
-                  August 2015
+                  August 2019
                 </h5>
               </div>
 
@@ -35,7 +35,7 @@ const About = () => {
             <div className="mb-20 mt-20 flex items-center w-full">
               <div className="w-1/2 text-right pr-5 md:pr-12">
                 <h5 className="text-lg md:text-2xl text-warning font-semibold">
-                  September 2016
+                  September 2020
                 </h5>
               </div>
               <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-black"></div>
@@ -56,7 +56,7 @@ const About = () => {
             <div className="mb-20 mt-20 flex items-center w-full">
               <div className="w-1/2 text-right pr-5 md:pr-12">
                 <h5 className="text-lg md:text-2xl text-dark-subtle font-semibold">
-                  January 2017
+                  January 2022
                 </h5>
               </div>
               <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-gray-300"></div>
@@ -73,7 +73,7 @@ const About = () => {
             <div className="mb-20 mt-20 flex items-center w-full">
               <div className="w-1/2 text-right pr-5 md:pr-12">
                 <h5 className="text-lg md:text-2xl text-warning font-semibold">
-                  May 2017
+                  May 2023
                 </h5>
               </div>
               <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-gray-300"></div>

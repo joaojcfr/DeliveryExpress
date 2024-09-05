@@ -7,7 +7,7 @@ import styles from './Login.module.css'
 
 const Login = () => {
   const { handleLogin } = useContext(AuthContext)
-  const [error, setError] = useState(''); 
+  const [error, setError] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false)
 
   const handleTogglePassword = () => {
@@ -46,7 +46,7 @@ const Login = () => {
       }
     }
   };
- 
+
   return (
     // <Tilt className="mt-5" options={options}>
     <div className={styles.main_frame} id={styles.login}>
@@ -61,12 +61,13 @@ const Login = () => {
         <div className={`inputbox1 mb-2 ${styles.inputbox1}`}>
           <label htmlFor="email" className="form-label"></label>
 
+
           {/* email */}
           <input
             autoComplete="on"
             onChange={(e) => setValues({ ...values, email: e.target.value })}
             type="text"
-            className={`email form-control rounded-5 ${styles.email}`}
+            className={`email form-control rounded-5 text-light bg-dark ${styles.email}`}
             placeholder="Email Address"
             required
             id="email"
@@ -74,6 +75,8 @@ const Login = () => {
           />
           <i className={`ms- fa-solid fa-envelope ${styles.emaillogo}`}></i>
         </div>
+
+
 
         {/* inputbox2 */}
         <div className={`inputbox2 ${styles.inputbox2}`}>
@@ -83,7 +86,7 @@ const Login = () => {
             autoComplete="on"
             onChange={(e) => setValues({ ...values, password: e.target.value })}
             type={passwordVisible ? 'text' : 'password'}
-            className={`password form-control rounded-5 ${styles.password}`}
+            className={`password form-control rounded-5 text-light bg-dark ${styles.password}`}
             placeholder="Password"
             required
             id="password"
@@ -102,15 +105,19 @@ const Login = () => {
             )}
           </span>
           {/* Remember Me Checkbox */}
-          <div className={`forgetpw ${styles.forgetpw}`}>
+          <div className={`forgetpw mt-2 ${styles.forgetpw}`}>
             <label htmlFor="checkbox">
               <input type="checkbox" className="me-2" id="checkbox" />
               <span>Remember Me</span>
             </label>
 
             {/* Forget Password */}
-          
+            <div className={`pw ${styles.pw}`}>
+              <a href="#">Forget password?</a>
+            </div>
+
           </div>
+
           {error && <div className={styles.error}>{error}</div>}
           <br />
           {/* Login Button */}
@@ -123,7 +130,7 @@ const Login = () => {
           </button>{' '}
           <br />
           {/* lines & OR */}
-          <span className={`OR login-form-copy mx-9 ${styles.OR}`}>
+          <span className={`OR login-form-copy mb-3 mx-9 ${styles.OR}`}>
             <img
               src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a948ef4e6cf94_Line%203.svg"
               alt=""
@@ -136,102 +143,71 @@ const Login = () => {
               className="inline-block"
             />
           </span>
+
+
           {/* Social Media Signup Buttons*/}
-          
+          <div className={`socialContainer flex ${styles.socialContainer}`}>
+
+            {/* facebook */}
+            <div className={`social-icon facebook ${styles.facebook}`}>
+              <span className="#">
+                <a href="https://facebook.com">
+                  <i className="fa-brands fa-facebook"></i>
+                </a>
+              </span>
+            </div>
+
 
             {/* instagram */}
-            
+            <div className={`social-icon instagram ${styles.instagram}`}>
+              <span className="#">
+                <a href='https://instagram.com'>
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+              </span>
+            </div>
+
 
             {/* google */}
-            
+            <div className={`social-icon google ${styles.google}`}>
+              <span className="#">
+                <a href='https://google.com'>
+                  <i className="fa-brands fa-google"></i>
+                </a>
+              </span>
+            </div>
+
 
             {/* linkedin */}
-            
-
-                   
-
-
-                    {/* Remember Me Checkbox */}
-                   
-
-
-                        {/* Forget Password */}
-                        {/* <div className={`pw ${styles.pw}`}>
-                            <a href="#">Forget password?</a>
-                        </div> */}
-                    
-                  
+            <div className={`social-icon linkedin ${styles.linkedin}`}>
+              <span className="#">
+                <a href='https://linkedin.com'>
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+              </span>
+            </div>
 
 
-                    {/* Login Button */}
-                    
+            {/* twitter */}
+            <div className={`social-icon twitter ${styles.twitter}`}>
+              <span className="#">
+                <a href='https://twitter.com'>
+                  <i className="fa-brands fa-x-twitter"></i>
+                </a>
+              </span>
+            </div>
+
+          </div>
 
 
-                    {/* lines & OR */}
-                    
+          {/* Don't have an account & Sign Up */}
+          <div className={`mt-4 createnew ${styles.createnew}`}>
+            <span>
+              Don't have an account? <a className='ms-2' role='button' href="./Register">Sign Up</a>
+            </span>
+          </div>
+        </div>
 
-                    {/* Social Media Signup Buttons*/}
-                   
-
-
-                        {/* facebook */}
-                        {/* <div className={`social-icon facebook ${styles.facebook}`}>
-                            <span className="#">
-                                <a href="https://facebook.com">
-                                    <i className="fa-brands fa-facebook"></i>
-                                </a>
-                            </span>
-                        </div> */}
-
-
-                        {/* instagram */}
-                        {/* <div className={`social-icon instagram ${styles.instagram}`}>
-                            <span className="#">
-                                <a href='https://instagram.com'>
-                                    <i className="fa-brands fa-instagram"></i>
-                                </a>
-                            </span>
-                        </div> */}
-
-
-                        {/* google */}
-                        {/* <div className={`social-icon google ${styles.google}`}>
-                            <span className="#">
-                                <a href='https://google.com'>
-                                    <i className="fa-brands fa-google"></i>
-                                </a>
-                            </span>
-                        </div> */}
-
-
-                        {/* linkedin */}
-                        {/* <div className={`social-icon linkedin ${styles.linkedin}`}>
-                            <span className="#">
-                                <a href='https://linkedin.com'>
-                                    <i className="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </span>
-                        </div> */}
-
-
-                        {/* twitter */}
-                        {/* <div className={`social-icon twitter ${styles.twitter}`}>
-                            <span className="#">
-                                <a href='https://twitter.com'>
-                                    <i className="fa-brands fa-x-twitter"></i>
-                                </a>
-                            </span>
-                        </div> */}
-                    
-
-                    {/* Don't have an account & Sign Up */}
-                    <div className={`mt-4 createnew ${styles.createnew}`}>
-                        <span>
-                            Don't have an account? <a className='ms-2' role='button' href="./Register">Sign Up</a>
-                        </span>
-                    </div>
-                </div>
-        
       </form>
     </div>
     // </Tilt>
