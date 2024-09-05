@@ -60,6 +60,7 @@
     margin: 10px 0;
     padding-left: 30px;
     transition: 0.1s ease-in;
+    border-radius: 40px;
 }
 
 .email,

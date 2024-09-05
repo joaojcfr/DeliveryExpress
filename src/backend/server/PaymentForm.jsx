@@ -152,7 +152,7 @@ const PaymentForm = () => {
       {error && <div className="message-error">{error}</div>}
       {success && <div className="message-success">Payment successful!</div>}
       <button type="submit" disabled={!stripe || !elements || success} className={` rounded-5 font-bold submit-button text-light ${styles.pay}`}>
-        Pay <span className='ms-1 text-warning'>$ </span>{orderData.price}
+        Pay <span className='ms-1 text-warning'>$ </span>{Price}
       </button>
     </form>
   );
